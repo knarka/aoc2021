@@ -16,6 +16,7 @@ Format can be:
 - `chrs` to return a blob of raw characters.
 |#
 (def puzzle-input (day format (o example))
+  (if (< day 10) (= day (string '0 day)))
   (let fname (string "data/day" day (if example "e") ".data")
    (w/infile inf fname
     (case format
