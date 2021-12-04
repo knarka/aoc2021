@@ -21,7 +21,7 @@ and a list of cards `cards`.
   cards))
 
 #|
-True is all items in sequence have been drawn, nil otherwise.
+True if all items in sequence have been drawn, nil otherwise.
 |#
 (def is-winning-seq (seq)
  (is
