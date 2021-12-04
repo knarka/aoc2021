@@ -17,8 +17,7 @@ and a list of cards `cards`.
   (= random-numbers (readall (subst #\  "," (car parts))))
   (= cards (map
             [map readall (tokens _ #\newline)]
-            (cdr parts)))
-  cards))
+            (cdr parts)))))
 
 #|
 True if all items in sequence have been drawn, nil otherwise.
