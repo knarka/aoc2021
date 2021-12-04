@@ -12,12 +12,12 @@
 (def find-rating (seq critf)
  (ccc
   (fn (ep)
-   (for i 0 (- (len (car seq)) 1)
+   (forlen i (car seq)
     (= cols (accum acc
              (forlen i (car seq)
               (acc (extract-column seq i)))))
     (= crit (critf cols))
-    (= seq (keep [is (_ i) (crit i)] seq))
+    (pull [isnt (_ i) (crit i)] seq)
     (when (is 1 (len seq))
      (ep (car seq)))))))
 

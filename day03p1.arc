@@ -21,6 +21,6 @@
 (def run-puzzle (e)
  (withs (inp (map [coerce _ 'cons] (puzzle-input 03 'strs e))
          cols (accum acc
-               (for i 0 (- (len (car inp)) 1)
+               (forlen i (car inp)
                 (acc (extract-column inp i)))))
    (* (bin2dec:gamma cols) (bin2dec:epsilon cols))))

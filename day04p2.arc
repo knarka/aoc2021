@@ -7,5 +7,5 @@
    (awhen (is-winner card)
     (= winning-card card)
     (= winning-seq it)
-    (= cards (rem card cards)))))
+    (pull card cards))))
  (calculate-score winning-card))

@@ -49,9 +49,7 @@ True if all items in sequence have been drawn, nil otherwise.
 Move first number in `random-numbers` to `drawn-numbers`.
 |#
 (def draw-number ()
- (let new-number (car random-numbers)
-  (= drawn-numbers (cons new-number drawn-numbers))
-  (= random-numbers (cdr random-numbers))))
+ (push (pop random-numbers) drawn-numbers))
 
 (def calculate-score (card)
  (* (sum int (rem [pos _ drawn-numbers] (flat winning-card))) (car drawn-numbers)))
