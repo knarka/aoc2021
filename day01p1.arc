@@ -1,7 +1,7 @@
 ; List eater. While there's at least two elements, recurse, adding one if
 ; the first is smaller than the second.
 (def count-increments (seq)
- (if (len< seq 2)
+ (if (single seq)
   0
   (if (< (car seq) (cadr seq))
    (+ 1 (count-increments (cdr seq)))

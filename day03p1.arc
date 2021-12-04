@@ -14,7 +14,7 @@
  (bin2dec1:rev seq))
 
 (def bin2dec1 (seq)
- (if (len< seq 1)
+ (if (is seq nil)
   0
   (+ (car seq) (* 2 (bin2dec1(cdr seq))))))
 
