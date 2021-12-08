@@ -12,7 +12,6 @@
          eight     (find [is (len _) 7] patterns)
          top       (diff one seven)
          nine      (find [is-nine _ four top] patterns)
-         bottom    (diff four (rem top nine))
          three     (find [is-three _ seven nine] patterns)
          top-left  (diff three nine)
          five      (find [is-five _ top-left] patterns)
